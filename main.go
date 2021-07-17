@@ -31,6 +31,9 @@ func main() {
 				length += size
 				if errorObject == io.EOF {
 					break
+				} else if errorObject != nil {
+					fmt.Println(errorObject)
+					os.Exit(1)
 				}
 			}
 		}
