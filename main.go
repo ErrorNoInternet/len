@@ -8,9 +8,9 @@ import (
 
 func main() {
 	var length int
+	buffer := make([]byte, 8000000)
 
 	if len(os.Args) == 1 {
-		buffer := make([]byte, 8000000)
 		for {
 			size, errorObject := os.Stdin.Read(buffer)
 			length += size
@@ -29,7 +29,6 @@ func main() {
 				fmt.Println(errorObject)
 				os.Exit(1)
 			}
-			buffer := make([]byte, 8000000)
 			for {
 				size, errorObject := file.Read(buffer)
 				length += size
