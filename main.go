@@ -8,7 +8,7 @@ import (
 
 func main() {
 	var length int
-	buffer := make([]byte, 8000000)
+	buffer := make([]byte, 16000000)
 
 	if len(os.Args) == 1 {
 		for {
