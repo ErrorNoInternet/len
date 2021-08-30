@@ -39,6 +39,7 @@ func main() {
 					os.Exit(1)
 				}
 			}
+			file.Close()
 		}
 	}
 	fmt.Println(length)
